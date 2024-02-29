@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+    <div class="main">
+        <h1 class="heading">Calculator</h1>
+        <div class="upper">
+            <div class="input"><input type="text" id="input"></div>
+        </div>
+        <div class="keypad">
+            <div class="numbtn">
+                <button class="btn69" value="**" onclick="{display(value)}">^</button>
+                <button class="btn" value="1" onclick="{display(value)}">1</button>
+                <button class="btn" value="2" onclick="{display(value)}">2</button>
+                <button class="btn" value="3" onclick="{display(value)}">3</button>
+                <button class="btn" value="4" onclick="{display(value)}">4</button>
+                <button class="btn" value="5" onclick="{display(value)}">5</button>
+                <button class="btn" value="6" onclick="{display(value)}">6</button>
+                <button class="btn" value="7" onclick="{display(value)}">7</button>
+                <button class="btn" value="8" onclick="{display(value)}">8</button>
+                <button class="btn" value="9" onclick="{display(value)}" >9</button>     
+                <button class="btn" onclick='(()=>{input.value=""})();'>Clear</button>
+                <button class="btn" value="0" onclick="{display(value)}">0</button>
+                <button class="btn" onclick='(()=>{input.value=input.value.slice(0,-1)})();'>Del</button>                   
+            </div>
+            <div class="optbtn">
+                <button class="btn" value="+" onclick="{display(value)}">+</button>
+                <button class="btn" value="-" onclick="{display(value)}">-</button>
+                <button class="btn" value="*" onclick="{display(value)}">*</button>
+                <button class="btn" value="/" onclick="{display(value)}">/</button>
+                <button class="btn" value="=" onclick="(()=>{
+                    try{
+                        input.value=eval(input.value)
+                    }
+                    catch(e){
+                        input.value='error';
+                    }
+                    })();">=</button>
+            </div>
+    </div>
+    </div>
+</body>
+</html>
